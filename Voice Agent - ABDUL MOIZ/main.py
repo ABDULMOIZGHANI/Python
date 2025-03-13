@@ -11,7 +11,7 @@ def speak(text):
     engine.runAndWait()
 
 def processCommand(c):
-    pass
+    print(c)
 
 if __name__ == "__main__":
     speak("ABDUL MOIZ VOICE BOT is initialize......")
@@ -34,7 +34,7 @@ if __name__ == "__main__":
                     audio = r.listen(source)
                     command = r.recognize_google(audio)
 
-                processCommand()
+                    processCommand(command)
 
         except Exception as e:
             print(f"Error, {e}")
