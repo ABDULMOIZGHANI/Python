@@ -62,6 +62,7 @@ def processCommand(c):
 
 if __name__ == "__main__":
     speak("ABDUL MOIZ VOICE BOT is initialize......")
+    
     while True:
         r = sr.Recognizer()
 
@@ -70,7 +71,7 @@ if __name__ == "__main__":
             with sr.Microphone() as source:
                 print("listening...")
                 audio = r.listen(source, timeout=2, phrase_time_limit=1)
-            word = r.recognize_google(audio)
+                word = r.recognize_google(audio)
             if word.lower() == "i need help":
                 speak("yeah please tell me how may I help you?")
 
